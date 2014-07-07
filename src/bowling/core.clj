@@ -1,4 +1,4 @@
-(ns awesome.core)
+(ns bowling.core)
 
 
 (defn score

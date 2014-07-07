@@ -1,6 +1,6 @@
-(ns awesome.core-test
+(ns bowling.core-test
   (:require [clojure.test :refer :all]
-            [awesome.core :refer :all]
+            [bowling.core :refer :all]
             [midje.sweet :refer :all]))
 
 (facts "foo"

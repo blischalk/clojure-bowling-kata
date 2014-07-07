@@ -1,3 +1,3 @@
-# Introduction to awesome
+# Introduction to bowling
 
 TODO: write [great documentation](http://jacobian.org/writing/great-documentation/what-to-write/)
