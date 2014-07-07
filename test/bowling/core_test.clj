@@ -53,6 +53,40 @@
 
 
 (facts "score-game"
-  (facts "given a spare is rolled in a frame"
+  (facts "given a spare is rolled"
     (fact "it adds the score of the next ball to the frame"
-      (score-game [[6 4] [5 1]]) => [15 6])))
+      (score-game [[6 4] [5 1]]) => [15 6]
+      (score-game [[2 8] [5 5] [7 3] [1 1]]) => [15 17 11 2]))
+  (facts "given a strike is rolled"
+    (fact "it adds the next 2 balls to the score"
+      (score-game [[10 0] [10 0] [2 4]]) => [22 16 6]))
+  
+  (facts "given the tenth frame is being scored"
+    (facts "given the first 2 balls are strikes"
+      (fact "the frame total includes third ball"
+ (score-game [[1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [10 10 8]]) => [2 2 2 2 2 2 2 2 2 28]))
+
+    (facts "given the second ball is a spare"
+      (fact "the frame total includes third ball"
+        (score-game [[1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [1 1]
+                     [3 7 8]]) => [2 2 2 2 2 2 2 2 2 18]))
+
+    (facts "given the second ball is not a spare or strike"
+      (fact "the frame total only includes the first 2 balls"))))

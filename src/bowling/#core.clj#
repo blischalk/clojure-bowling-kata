@@ -46,7 +46,7 @@
                     pre-total (apply + cframe)]
                 (conj coll 
                       (cond (and (= 10 (+ (first cframe) (second cframe)))
-                                 (not= 10 (first cframe))) pre-total
+                                 (not= 10 (first cframe))) :foo
                             (= 10 (first cframe))
                             (+ pre-total
                                (first nframe) 
@@ -55,7 +55,8 @@
                                  (last nframe)))
                             :otherwise pre-total))))
             []
-            partitioned)))
+            partitioned)
+    (println prre-t)))
 
 
 (defn -main
