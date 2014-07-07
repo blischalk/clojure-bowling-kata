@@ -1,0 +1,8 @@
+(ns awesome.core-test
+  (:require [clojure.test :refer :all]
+            [awesome.core :refer :all]
+            [midje.sweet :refer :all]))
+
+(facts "foo"
+  
+)
