@@ -64,7 +64,7 @@
   (facts "given the tenth frame is being scored"
     (facts "given the first 2 balls are strikes"
       (fact "the frame total includes third ball"
- (score-game [[1 1]
+        (score-game [[1 1]
                      [1 1]
                      [1 1]
                      [1 1]

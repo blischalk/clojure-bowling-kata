@@ -46,7 +46,12 @@
                     pre-total (apply + cframe)]
                 (conj coll 
                       (cond (and (= 10 (+ (first cframe) (second cframe)))
-                                 (not= 10 (first cframe))) pre-total
+                                 (not= 10 (first cframe)))
+                            (if (nil? nframe)
+                              pre-total
+                              (+ pre-total (first nframe)))
+                            (= 10 (first cframe) (second cframe))
+                            pre-total
                             (= 10 (first cframe))
                             (+ pre-total
                                (first nframe) 
